@@ -1,0 +1,27 @@
+Hive
+	Apache
+	SQL Interface
+	Map Reduce Program
+	Needs a metastore (SQL Server/SQL DB)
+	Repository/hive warehouse repository
+
+Capabilities
+	Hive DB
+	Hive View
+	Hive Tables
+		Internal/managed - create table ()
+			   		insert into
+			   		load into 
+					delete
+					drop
+		External - create external table tab1(col1 date, ....)
+			    location "..\project1\raw_layer\customer.parquet"
+			    stored as parquet
+			    partitioned by 'date'
+			drop external table
+
+
+AZURE
+AWS
+GCP
+

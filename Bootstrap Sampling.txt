@@ -1,0 +1,30 @@
+Sampling
+
+1. Simple Random Sampling
+2. Systematic Sampling
+3. Stratified Sampling
+4. Cluster Sampling
+
+Undersampling - Bootstrap Sampling
+
+Bootstrap Sampling
+	Sampling with Replacement
+	one dataset of 100 Records --> 100 Datasets each containing 100 records
+	No Dataset will be exact copies
+	OOB(Out of Bag) Records - missing records from each bags. Each file will have some OOB
+	Leverage OOB records for testing purpose
+	Bootstrap sampling is also called as 63.2 Sampling/0.632 Bootstrap/36.8 Sampling
+		P of records picked up - 1/n
+		P of records not picked up - (1 - (1/n))==> (1-(1/e))
+	
+
+
+Original -->[1,2,3,4,5,6,7,8,9,10] 
+Resampled --> [8,9,10,2,3,4,9,10,5,5]
+OOB --> [1,6,7]
+Resampled --> [8,9,10,2,3,4,9,10,10,5]
+OOB --> [1,6,7]
+Resampled --> [8,6,10,1,3,4,6,10,10,5]
+OOB --> [2,7,9]
+Resampled --> [1,2,2,10,5,6,7,7,9,10] 
+OOB --> [3,4,8]

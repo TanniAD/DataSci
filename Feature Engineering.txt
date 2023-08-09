@@ -1,0 +1,96 @@
+Feature Engineering - Before building model
+Model Tuning - after building model
+
+70-80% of Time is in Data Analysis
+
+Right data --> Your model is efficient
+
+
+Data Sources
+	Hadoop
+	Mongo DB
+	Cassandra
+	RDBMS - Oracle, Sql Server, Terradata, DB2, Red Shift
+	File - Delimited files, csv, xml, json
+	web sources
+	image
+	videos
+	audio
+
+Normalized DS
+	Region
+		Countries
+			States
+				City
+
+	Purchase Order Header
+		PO Detail
+			PO Release
+
+DWH - Denormalized Source
+	Purchase_Order_Data
+
+EDA
+	Check the value range
+		Order Quantity - 150 to 300 || Outliers 1800,1900,2100
+	Missing Values
+		Random or Pattern
+	Check the outliers
+		Using Seaborn Pair Plot
+		Using .skew()
+		Using Seaborn Box plot
+		Using .describe()
+
+		x-mean +- 2 SD
+		x-mean = 185
+		sd = 15
+		450
+		185 + 30 = 215
+	Understanding the column meaning
+	Have good domain expertise
+	
+
+Missing Values Imputation	
+	Values could be missing due to randomness or due to some conditional
+	1. Replace with statistical values
+		median - 
+		Why median?
+			75 76 78 79 80 81 82 98 99
+			1000 1010 1025 1043 1100 10000 15000
+				mean - 4154
+				median -1043
+
+	2.Fixed values
+	3. Building a model for predicting missing values
+
+
+Replace Outliers
+	Check if outlier is functionally correct or wrong by comparing with other column data
+	1. Replace extreme outliers with median
+		1000 1010 1025 1043 1100 10000 15000
+				mean - 4154
+				median -1043
+		1000 1010 1025 1043 1100 1043 1043
+	2. Capping
+		Replacing outliers 2SD or 3SD from mean with Median
+			1000 1010 1025 1043 1100 1500 1600 1440
+			1000 1010 1025 1043 1100 1043 1043 1043 - Bimodal
+
+If you have different Gaussians which are not fully overlapping, then consider building separate models
+	car-mpg
+		cars of range hp 90 - 450
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+

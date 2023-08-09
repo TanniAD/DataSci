@@ -1,0 +1,114 @@
+Decision Trees
+	Popular model for classification problems
+	Can be used for both classification(Binary & Multiclass Classification) and regression
+	Mostly used in decision making situations
+	DT expresses the relationship between Independent and Dependent variables in the form rules
+
+	Comparison Model
+						HDD
+			Family						Friends
+	Marriage		Get Together		Party				Trips
+
+	DT continues to split until it encounters a complete homogenity
+
+Algorithms
+	ID3 - Iterative Dicotomizer
+	C4.5
+	C5.0(Latest version of ID3)
+	CART - Classification and Regression Trees
+		CART algorithm is available in Sklearn
+		Binary Tree - every step, data is broken to two branches
+		CART is based on C4.5
+
+Errors in DT
+	Chances of making incorrect predictions
+	DT continues to split until it encounters a complete homogenity - because of this, multiple buckets will be formed and leads to overfit trees.
+		To avoid this, we need to regularize
+
+Regularization
+	1. max_depth
+	2. min_sample_split
+	3. min_sample_leaf
+	4. max_leaf_nodes
+	5. max_feature
+	
+Avoiding Homogenity - we use regularization that leads to heterogenity. To handle heterogenity - Posterior Probability
+	Posterior Probability
+		L = 1 => 1/3
+		S = 2 => 2/3
+
+Loss Function/Learning Process
+	DT algorithm learns from the data through optimization of loss function
+	Loss functions represents the reduction in impurity in the target column i.e, to increase the homogenity of the target
+	Measures for formulating the impurities
+		Entropy - a measure of uncertainity(Shannon's Entropy)
+			Example
+				6 Large Cars and 4 Small Cars [6,4]
+				H(X) = - sum(p(log2(p))) = -(0.6 * log2(0.6) ) - (0.4 * log2(0.4)) = 0.9709
+				10 Large Cars and 0 Small Cars [10,0]
+				H(X) = - sum(p(log2(p))) = -(1 * log2(1) ) = 0
+				5 Large Cars and 5 Small Cars
+				H(X) = 1
+		Gini = 1-sum(p)^2
+
+Examples for impurity
+	1. Tossing a coin H/T
+		More Uncertain
+	2. Tossing a coin H/H
+		More Certain
+
+Uncertainity is expressed as Entropy or Gini
+
+	More Heterogeneous - more uncertain
+		L = 2 => 2/4
+		S = 2 => 2/4
+	More Homogeneous - Less Uncertain
+		L = 4
+
+Splitting Methods
+	Gini Index
+	Chi Square
+	Information Gain
+	Reduction in Variance
+
+Advantages of DT
+	1. Easy to understand
+	2. Less data cleaning required
+	3. Non parametric( No assumptions)
+	4. Data type is not a constraint
+
+Disadv
+	1. Even a small change in training dataset might change the complete structure of tree
+	2. DT always tends to be overfit when creating complex trees
+	3. Large trees can be difficult to interpret
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+

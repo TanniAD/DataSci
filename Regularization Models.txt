@@ -1,0 +1,38 @@
+Regularization Model
+
+Shrinkage models
+
+Linear Models = coeff
+
+Cost function - SSE
+
+Curse of Dimensionality
+	Depth vs Breath analysis
+
+
+Loss function = SSE
+
+Regularization
+	Ridge Model
+	Lasso Model
+
+
+Ridge Model
+	Linear Regression - SSE
+	Ridge -	Coefficient
+
+	Ridge Expression
+		Linear Regression Cost Function = Sum(yactual-ypred)^2
+		Ridge Expression with addl. term in cost function = Sum(yactual-ypred)^2 + lambda * sum(coefficient)^2
+			lambda - penalty term --> suppress the coefficients
+				when lambda is high coefficients are suppressed
+				when lambda is low, eg =0, the exp is the same as Linear Regression
+				lamda - select lamda in such a way that your model performs best in test and training
+	After regularization, coeff may come closer to 0
+
+Lasso Model - least absolute shrinkage and selection operator
+	Lasso Expression with addl. term in cost function = Sum(yactual-ypred)^2 + lambda * sum(coefficient)
+	After regularization, coeff may be 0
+	y=m1X1 + m2X2 + m3X3 +C
+	if m3 = 0, then y=m1X1 + m2X2 + C
+	

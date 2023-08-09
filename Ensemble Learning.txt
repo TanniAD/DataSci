@@ -1,0 +1,126 @@
+Ensemble Learning
+	Awn-semble models/metamodels
+	Accuracy & Stability - Hypertuning Parameters, Better regularization, etc
+	Group of models can be used for Classification and Regression
+	Creates multiple models so they work together
+
+
+Classical Way - pick the model with highest score
+Training data -->
+		M1 --> Score1
+		M2 --> Score2
+		M3 --> Score3
+		.
+		.
+		M-n --> Score-n
+
+Ensemble Model - models will be combined to form a single model
+Training data -->
+		M1
+		M2
+		M3
+		.
+		.
+		M-n --> Final Model
+
+Properties of Ensemble Models
+	1. Models are different from each other
+	2. Errors made by each model should be independent
+	3. Model should not be regularized - by not regularizing we may end up in High Variance. When put together, errors cancel at the time of voting/aggregation
+	4. Model as a result will be more stable/consistent and accurate --> it is a low variance and low bias model
+
+Ensemble Methods
+	1. Bagging (Bootstrap Aggregation)
+	2. Boosting
+	3. Random Forest
+
+
+Bagging (Bootstrap Aggregation)
+
+Training data -->
+		M1
+		M2
+		M3
+		.
+		.
+		M-n --> Final Model
+
+	Dataset - 100 records --> Binary Classification problem -->  Building 4 models M1, M2, M3, M4
+
+	Classification: Voting
+		M1 - Y
+		M2 - N
+		M3 - Y
+		M4 - Y
+		
+		Final Model - Y
+
+	Regression: Aggregation - Mean--/Median
+		M1 - 10.5
+		M2 - 11.2
+		M3 - 10.3
+		M4 - 11.5
+
+		Final Model - 10.875
+
+	Designed to improve the stability and accuracy of both classification and regression models
+	Reduces variance and helps avoiding overfitting
+	can be used for any models but mostly used for DT
+	Uses Bootstrap for creating multiple samples
+	
+	Original Dataset --> Bootstrap Sampling(4) --> Classifier M1 --> Majority
+					   	   --> Classifier M2 --> Majority
+					           --> Classifier M3 --> Majority
+					           --> Classifier M4 --> Majority--> Final Model
+
+BOOSTING
+	Another technique of Ensemble
+	Similar to Bagging, Boosting also tries to minimize the variance and bias
+	Models are created in sequence
+	Each sequence/model has its own error
+	This technique can be used for building models of higher accuracy even till 1 but it is an infinite model building process
+
+	Training Set --> M1(5 Incorrect Predictions) --> M2(3 Incorrect Predictions) --> M-n(Final Model)
+
+	old weight = 1/n --> n - number of instances or records
+	new weight = old weight * exp(stage * t-error)
+	stage = ln(1-error/error)
+	error = (correct - N)/N  --> N - total number of training instances
+	t-error = 0 if y_pred == actual value, otherwise 1
+
+Gradient Boosting
+	It learns from previous mistakes
+	Residual Error = actual value - predicted value
+	
+Ada Boosting
+	Adaptive Boosting
+	
+	
+Random Forest
+	Concept behind Ensemble is to combine multiple weak learners to form a strong learner
+	To achieve this, we create multiple models making different mistakes
+	Each Bootstrap models are different interms of not being exact copies but not different data
+	Hence models may be quite similar and their errors may be similar and that leads to correlation in errors made by models
+	Hence Random Forest(RF) comes into picture
+	Rf is designed for Decision trees
+	Number of features given to each model may be defined as sqrt(number of features in the original dataset)
+	Every Tree will be different since features are different
+
+	Original Dataset(20 features) --> Bootstrap Sampling(5 samples- (20 features)) --> Classifier M1 --> Majority
+					   	   					--> Classifier M2 --> Majority
+					           					--> Classifier M3 --> Majority
+						   					--> Classifier M4 --> Majority
+					           					--> Classifier M5 --> Majority--> Final Model
+
+
+
+
+
+
+
+
+
+
+
+
+

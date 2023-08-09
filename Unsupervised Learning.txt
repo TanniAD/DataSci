@@ -1,0 +1,112 @@
+Unsupervised Learning(USL)
+	It uncovers hidden/unknown patterns which Supervised learning was/may not be able to uncover.
+	Supervised Learning is more applicable to real-world problems.
+	Unsupervised may not be accurate
+	Then why?
+		We need UnSupervised learning in places where you donot have past references
+
+USL Methods
+	Clustering
+		1. Flat Clustering
+			K Means Clustering
+			DB Scan Clustering
+		2. Hierarchical Clustering
+			Agglomerative
+			Divisive
+	Principal Component Analysis(PCA)
+	Association Rules Mining(ARM)
+
+Clustering
+	Identify groups in data
+	Exploratory Technique to discover the hidden structures of the data
+	Decompose the data into subsets, each subset representing a group of similar behaviour/characteristics/features
+	These clusters should be named and it is called as Cluster ID. Center of cluster being Cluster Centroid
+	Clustering can be used for categorization -- gems chocolate
+
+Application of Clusterings
+	1. Customer Segmentation
+	2. Medical
+	3. Image Processing
+
+Clustering Techniques
+	1. Flat Clustering
+		K Means Clustering
+		DB Scan Clustering
+	2. Hierarchical Clustering
+		Agglomerative
+		Divisive
+
+Distance is used as a measure to analyze the similarity of data points
+When distance is less, more similar/ when distance is high, more dissimilar they are
+
+Non-Euclidean Distance:
+1. Jaccard Distance
+2. Cosine Distance
+3. Mahalanobis Distance
+4. Edit Distance
+
+
+K Means Clustering
+
+	Means refers to centroid
+	K Means algorithm chooses centroids such that it minimizes the interia accros all clusters
+	SSE - Variance of all data points from the centroid. When clusters are more, SSE will be less
+	Random centroids will be picked up - Centroids are positions in mathematical space and not data points
+	So, computationally intensive
+	when given enough time, k means will settle down on best centroids and clusters
+	Sklearn, K Means++ initialization scheme, initializes the centroids such that they are distant enough and hence leads to better results
+
+
+Identifying Best k
+	Elbow Technique
+		Computationally intensive
+		Calculate the inertia for multiple k values
+		Elbow may not be always visible - curve may be smooth
+			So we go with Visual Analysis
+
+Hierarchial Clustering
+	Another CLustering technique
+	Issues in K Means Clustering
+		Finding Centroids. Cluster formation is dependent on centroids
+		Find best k
+	There is a chance, among the clusters formed, there could be sub clusters inside
+	So when subclusters can be formed, we go for Hierarchial Clustering
+	Dendrograms can be used for identifying hidden sub clusters in flat clusters
+	No need to specify to K in Hierarchial Clustering but sklearn asks for n_clusters
+
+Divisive Method
+	Super clusters are broken down to sub clusters such that they reduce the variances
+	Stops at individual data point
+	Similar to Decision Tree but different algorithms
+
+Agglomerative Method
+	Individual data points are considered as clusters and they are joined and this process continues until it reaches where no further joining can be done
+	It gives the visual way of analyzing the clusters
+	It progressively agglomerates or joins or combines the two nearest clusters until there is one grand cluster left in the feature space
+	
+	Method1 - Single Linkage(Minimum Distance)
+		Identify the distance of points closer to each cluster and whichever has the least distance, those clusters are combined.
+	Method2 - Max Linkage(Complete Linkage)
+		Identify the farthest points between the clusters and then combine.
+	Method3 - Average Linkage
+		Add all the distance and divide by n
+	Method4 - Centroid Distance
+		Measure the distances of centroids and then combine
+	Method5 - Ward's Method
+		Clusters are combined such that variance is increasing minimally
+		
+			
+	
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,74 @@
+Bias and Variance Error
+
+	Aim is to build generalized efficient models
+		overfit --> model performs well in training datasets and underperforms in testing/validation data -- High Variance
+		Generalized Model --> model which performs the same in both training and testing dataset -- Low Variance and Low Bias
+		underfit --> model does not perform well in training datasets as well underperforms in testing/validation data -- High Bias
+	Reduce Errors
+
+Model Error - Misclassification or wrong prediction
+
+Error
+	Irreducible Error/Unavoidable Error
+		Caused by unknown variables
+	Reducible Error
+		Bias
+		Variance
+
+Total Error = Bias^2 + Variance + Irreducible Error
+
+Bias - 
+	Building simple models with less influential features leads to incaccurate models
+	Bias explains how far are the predicted values from the actual values
+	Defines more of accuracy
+	High Bias - Underfit, inaccurate, simple model
+	Reason for Bias - Model could not capture the real world complexity of the data
+	Example - Model -> Predicting fuel efficiency with just Speed input - 20 kmpl
+		 In real world - traffic, load on your car, acceleration, your driving behaviour - 18 kmpl
+
+Variance
+	Defines more of consistency
+	occurs when model performs best/good in training dataset but fails in test/Validation/prod
+	High variance cause overfitting in the model - overfit, inconsistent
+	Reason for Variance - More complex model
+
+Trade Off
+	Model complexity should be in such a way that made TRADE OFF Bias with Variance
+		
+	High Bias Low Variance --> inaccurate, consistent
+	High Bias High Variance --> inaccurate, inconsistent
+	Low Bias Low Variance --> accurate, consistent
+	Low Bias High Variance --> somewhat accurate, inconsistent
+
+Identification Techniques
+	Bias
+		High Training Error
+		High Validation/Test Error
+
+	Variance
+		Low Training Error
+		High Validation Error
+
+Reducing High Bias and High Variance
+	Bias
+		Add more good features or polynomial featuring
+		Reduce Regularization
+
+	Variance
+		Increase more training data
+		Reduce input features
+		Increase regularization
+		
+
+
+
+
+
+
+
+
+
+
+
+
+

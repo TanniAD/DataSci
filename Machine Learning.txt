@@ -1,0 +1,80 @@
+Machine Learning
+
+	Rich Data Set
+		Without Impurities - missing values, duplicates(de-dup), modelling (raw viewable(10) > conformance(10000) > enrichment(10))
+		Avoid Curse of Dimensionality - fuel type, car type, transmission, hp,etc - price(p/s/a, p/s/m, p/suv/a, p/suv/m , p/hb/a, p/hb/m) , (d/s/a, d/suv/a, d/hb/a)
+		length vs breadth analysis
+
+CAR TYPE - SEDAN, SUV
+TRANSMISSION - M,A
+Gears 
+Cylinders
+
+2*10*3=60
+
+FUEL TYPE	CAR TYPE	transmission	PRICE
+P		SEDAN		M		15000
+D		SEDAN		M		17000
+P		SUV		M		22000
+D		SUV		M		25000
+P		SUV		A		10500
+
+transmission - M/Amt/CVT/IMT/DCT
+CAR TYPE - SUV/HATCH BACK/SEDAN/CROSSOVER/SPORTY
+FUEL TYPE - P/D/CNG/LPG/EV
+
+Machine Learning
+	Supervised - you know what to predict
+		Classification(Target is character/string data)
+			Two labels - Binary Classification(Example y/n)
+			Multi Class Classification - (Hand written number images) 0 1 2 3 4 5 6 7 8 9(10 classes)
+				Eg Vehicle Types - Sedan, SUV, Pickup Trucks, Trucks, Heavy Haulers
+		Regression - predicting numeric
+			Predicting numeric values
+				eg mpg, rainfall, temp, sales revenue etc
+
+Supervised Learning
+	Two Stage Process - train_test_split
+		Training(70%) - 70000
+		Testing(30%)  - 30000
+
+	Independent Variables
+		Attributes
+		Columns
+		Predictors
+		Features
+		Dimensions
+		Input
+	Dependent Variables
+		Output
+		Response
+		Target
+
+	Algorithms
+		Linear Regression - > split data, initialize algorithm class, fit data, predict -> y=mX+C
+		Logistic Regression -> Sigmoid Function, logit, log loss functions
+		Naive Bayes Classifier -> Bayes Theorem
+		Nearest Neighbors -> Euclidean, Manhattan, Cosine
+		SVM -> Vector
+		DT -> Entropy, Gini
+
+	70% --> 10% --> 20% - Tuning
+
+Unsupervised
+
+Requirement --> analyze(feasibility - data) --> Data Science(No SQL, Cassandra, Oracle, SQL Server, Redshift, Terradata, XML, Flat Files, CSV) --> EDA(Descriptive Statistics, Data Visualization) --> Model --> Deploy.
+
+
+Name:
+Age:
+sex:
+RBC
+WBC
+Lym
+
+
+Predict
+
+
+		
+

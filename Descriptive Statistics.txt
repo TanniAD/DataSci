@@ -1,0 +1,63 @@
+EDA - Exploratory Data Analysis
+
+Inferential Statistics - Generalizing based on samples
+
+Descriptive Statistics
+	Central Tendency
+	Variability
+
+Central Tendency - this describes best about the dataset
+	mean -  average
+	median - middle most value (n+1/2)
+	mode - most frequeny
+
+Variability - Measure of spread/Dispersion
+	Standard Deviation
+	variance
+
+Range - Min and Max Values
+
+Percentile - 
+10,15,23,34,45,56,68,74,83
+25% - 23
+50% - 45
+75% - 68
+IQR = Q3 - Q1 = 68 - 23 = 45
+
+1,2,3,4,5|6,7,8,9,10|11,12,13,14,15|16,17,18,19,20
+25% - 5.5 -Q1
+50% - 10.5 - Q2
+75% - 15.5 - Q3
+
+
+Quartiles
+1,2,3,4,5|6,7,8,9,10|11,12,13,14,15|16,17,18,19,20
+
+Inter Quartile Range
+
+IQR = Q3 - Q1 = 15.5 - 5.5 = 10
+
+Skewness
+	Defines the tails in data
+	Caused by outliers
+	
+	Positive Skew - Right tailed
+	Negative Skew - Left tailed
+
+Correlation
+	How strongly correlated - a pair of variables
+
+	Positive correlation 0 to 1
+	Negative correlation -1 to 0
+	No correlation 0
+	
+	Pearson's Correlation Coefficient - r -- > -1 to 1
+
+
+
+
+
+
+
+
+
