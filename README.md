@@ -1,1 +1,5 @@
-# DataSci_
+# Data Science Algorithms
+
+Feature Selection 
+Decision Tree
+Linear Regression
